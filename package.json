@@ -1,0 +1,32 @@
+{
+  "name": "@akishichinibu/typedmeta",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "author": "akishichinibu@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write ./src/ && prettier --write ./tests/",
+    "test": "jest",
+    "build": "tsc",
+    "watch": "npm run build -- -w",
+    "clean": "rm -rf dist",
+    "prepack": "npm run clean; npm run build",
+    "precommit": "npm run prettier"
+  },
+  "dependencies": {
+    "@akishichinibu/typedutilities": "file:.yalc/@akishichinibu/typedutilities",
+    "console-table-printer": "^2.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "prettier": "^2.4.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
